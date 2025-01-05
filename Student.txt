@@ -1,3 +1,5 @@
+# Creating Table
+
 CREATE TABLE Student (
     STU_NUM char(6) NOT NULL,
     STU_SNAME varchar(15),
@@ -8,6 +10,8 @@ CREATE TABLE Student (
     PROJ_NUM int(2),
     PRIMARY KEY (STU_NUM)
 );
+
+# Adding initial values
 
 INSERT INTO Student
     Values(01, 'Snow', 'Jon', 'E', '2014-04-05', '201', 6),
