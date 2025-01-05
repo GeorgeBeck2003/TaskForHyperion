@@ -22,19 +22,29 @@ INSERT INTO Student
           (06, 'Tyrell', 'Margaery', 'Y', '2017-07-12', '305', 10),
           (07, 'Baratheon', 'Tommen', 'R', '2019-06-13', '201', 5);
           
+# Retrieving all records where course code = 305
+
 SELECT * FROM Student
 WHERE COURSE_CODE = '305';
+
+# Changing all the course codes to 304 for students whose student number = 07
 
 UPDATE Student
 SET COURSE_CODE = '304'
 WHERE STU_NUM = 07;
 
+# Deleting record from Student where all requirements are matched
+
 DELETE FROM Student
 WHERE STU_FNAME = 'Jamie' and STU_SNAME = 'Lannister' and 
 STU_STARTDATE = 2012-09-05 and COURSE_CODE = '101' and PROJ_NUM = 2;
 
+# Changing the project number to 14 for all students who started before 2016
+
 UPDATE Student
 SET PROJ_NUM = 14
-WHERE STU_STARTDATE < '2016-01-01';
+WHERE STU_STARTDATE < '2016-01-01'
+
+# Delete the table Students
 
 DELETE FROM Student;
